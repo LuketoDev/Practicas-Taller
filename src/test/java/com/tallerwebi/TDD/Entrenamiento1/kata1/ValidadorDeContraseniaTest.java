@@ -1,7 +1,7 @@
-package com.tallerwebi.TDD.Entrenamiento1;
+package com.tallerwebi.TDD.Entrenamiento1.kata1;
 
-import com.tallerwebi.TDD.Entrenamiento1.enums.Fortaleza;
-import com.tallerwebi.TDD.Entrenamiento1.excepciones.ContraseniaNullException;
+import com.tallerwebi.TDD.Entrenamiento1.kata1.enums.Fortaleza;
+import com.tallerwebi.TDD.Entrenamiento1.kata1.excepciones.ContraseniaNullException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

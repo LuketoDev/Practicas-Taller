@@ -1,4 +1,4 @@
-package com.tallerwebi.TDD.Entrenamiento1.excepciones;
+package com.tallerwebi.TDD.Entrenamiento1.kata1.excepciones;
 
 public class ContraseniaNullException extends Exception {
 
