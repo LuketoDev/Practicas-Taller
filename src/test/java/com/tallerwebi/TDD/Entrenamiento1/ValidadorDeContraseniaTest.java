@@ -1,16 +1,11 @@
-package com.tallerwebi.TDD;
+package com.tallerwebi.TDD.Entrenamiento1.excepciones;
 
-import com.tallerwebi.TDD.enums.Fortaleza;
-import com.tallerwebi.TDD.excepciones.ContraseniaNullException;
-import org.hamcrest.core.IsEqual;
-import org.hamcrest.text.IsEqualIgnoringCase;
-import org.junit.jupiter.api.BeforeAll;
+import com.tallerwebi.TDD.Entrenamiento1.enums.Fortaleza;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import com.tallerwebi.TDD.ValidadorDeContrasenia;
+import com.tallerwebi.TDD.Entrenamiento1.ValidadorDeContrasenia;
 
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.equalToIgnoringCase;
 import static org.hamcrest.Matchers.is;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
