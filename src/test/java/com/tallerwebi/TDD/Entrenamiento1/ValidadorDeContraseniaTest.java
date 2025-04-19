@@ -1,9 +1,9 @@
-package com.tallerwebi.TDD.Entrenamiento1.excepciones;
+package com.tallerwebi.TDD.Entrenamiento1;
 
 import com.tallerwebi.TDD.Entrenamiento1.enums.Fortaleza;
+import com.tallerwebi.TDD.Entrenamiento1.excepciones.ContraseniaNullException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import com.tallerwebi.TDD.Entrenamiento1.ValidadorDeContrasenia;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;

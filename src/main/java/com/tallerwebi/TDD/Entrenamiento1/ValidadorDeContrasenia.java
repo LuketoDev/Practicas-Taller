@@ -1,7 +1,7 @@
-package com.tallerwebi.TDD;
+package com.tallerwebi.TDD.Entrenamiento1;
 
-import com.tallerwebi.TDD.enums.Fortaleza;
-import com.tallerwebi.TDD.excepciones.ContraseniaNullException;
+import com.tallerwebi.TDD.Entrenamiento1.enums.Fortaleza;
+import com.tallerwebi.TDD.Entrenamiento1.excepciones.ContraseniaNullException;
 
 /***
  * Debe validar si la fortaleza de la contraseña es DEBIL, MEDIANA o FUERTE
