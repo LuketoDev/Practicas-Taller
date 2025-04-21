@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- ESTE HTML ESTA ECHO PARA EL EJERCICIO 2 ENTRENAMIENTO 2 -->
+
+    <meta charset="UTF-8">
+    <title>Detalle</title>
+
+  <!-- Boostrap core css -->
+  <link rel="stylesheet" th:href="@{/webjars/bootstrap/5.2.0/css/bootstrap.min.css}"/>
+
+  <!-- custom style -->
+  <link rel="stylesheet" th:href="@{/css/main.css}"/>
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+  <a class="navbar-brand" href="#">UNLAM</a>
+</nav>
+
+<main role="main" class="container">
+
+  <div class = "container">
+    <div id="detalle-box" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+      <h2>Detalle del producto</h2>
+      <div th:if="${mensaje == null}">
+        <h4>Nombre: <span th:text="${producto.nombre}"></span></h4>
+        <h4>Precio: <span th:text="'$' + ${producto.precio}"></span></h4>
+        <h4>Descripcion:</h4><p th:text="${producto.descripcion}"></p>
+      </div>
+
+      <p th:if="${mensaje != null}" class="alert alert-danger" th:text="'Error: ' + ${mensaje}"></p>
+      <a th:href="@{/productos}" id="link-detalle" class="btn btn-lg btn-primary btn-block">Volver a la lista</a>
+
+    </div>
+  </div>
+</main>
+<!-- /.container -->
+
+<!-- Boostrap core js -->
+<script type="text/javascript" th:src="@{webjars/bootstrap/5.2.0/js/bootstrap.min.js}"></script>
+<script type="text/javascript" th:src="@{js/main.js}"></script>
+</body>
+</html>

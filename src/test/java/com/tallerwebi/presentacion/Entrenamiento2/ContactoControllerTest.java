@@ -9,6 +9,16 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 
 /*
+📝
+ Requisitos:
+ 1. Vista `contacto.html`:- Un formulario con los siguientes campos:
+  - Nombre (input de texto)
+  - Email (input de tipo `email`)
+  - Mensaje (textarea)
+  - Botón de envío
+  - Usar `th:action` y `th:object` para enviar el formulario al backend.
+  - El formulario debe enviarse por `POST` al controlador.
+
 2. Controlador:
 - Clase `ContactoController`
 - Método `mostrarFormulario()` que devuelve la vista `contacto`.
@@ -16,7 +26,17 @@ import static org.hamcrest.Matchers.*;
 - Guarda los datos en un objeto `Contacto` (puede ser un POJO con nombre, email, mensaje).
   - Agrega el objeto al modelo.
   - Redirige a una vista de confirmación -> confirmacion.html
+
+ 3. Vista `confirmacion.html`:
+ - Mostrar un mensaje de agradecimiento personalizado con el nombre del usuario.
+ - Mostrar el mensaje enviado y el email.
+
+ Tips:
+ - Usar `@GetMapping("/contacto")` para el formulario.
+ - Usar `@PostMapping("/contacto")` para procesar el envío.
+ - No se necesita persistencia, solo mostrar cómo pasar los datos
  */
+
 public class ContactoControllerTest {
 
     ContactoController controlador;
@@ -42,7 +62,7 @@ public class ContactoControllerTest {
 
         String vistaEsperada = "contacto";
 
-        assertThat(vistaEsperada, equalTo(vistaObtenida));
+        assertThat(vistaObtenida, equalTo(vistaEsperada));
         assertThat(modeloObtenido.get("contactoDto"), instanceOf(ContactoDto.class));
     }
 
@@ -65,7 +85,7 @@ public class ContactoControllerTest {
 
         String vistaEsperada = "confirmacion";
 
-        assertThat(vistaEsperada, equalTo(vistaObtenida));
+        assertThat(vistaObtenida, equalTo(vistaEsperada));
         assertThat(modeloObtenido.get("contactoDto"), is(contacto));
     }
 }
